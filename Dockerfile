@@ -3,13 +3,10 @@ FROM node:lts-alpine
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install # package.jsonに基づいて依存パッケージをインストール
 
 COPY . .
 
-# Gitをインストール
-RUN apk add git
+RUN npm run build # TypeScriptのコンパイル
 
-RUN npm run build
-
-CMD ["npm", "run", "start"]
+CMD ["node", "dist/index.js"]
