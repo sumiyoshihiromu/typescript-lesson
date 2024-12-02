@@ -37,3 +37,6 @@ const coffee = {
 
 let unionType: number | string = 10;
 unionType = 'hello';
+
+type ClothSize = 'small' | 'medium' | 'large';
+let clothSize: ClothSize = 'large';
