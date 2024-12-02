@@ -34,3 +34,6 @@ const coffee = {
   hot: true,
   size: cofeeSize.TALL
 }
+
+let unionType: number | string = 10;
+unionType = 'hello';
